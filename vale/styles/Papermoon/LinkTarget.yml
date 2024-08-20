@@ -1,0 +1,9 @@
+# Ensures internal and external links open in a new window
+extends: existence
+message: "Links should include '{target=_blank}' to open in a new tab."
+level: error
+scope: raw
+tokens:
+  - '\[.*?\]\(.*?\)'
+raw:
+  - '{target=_blank}'
